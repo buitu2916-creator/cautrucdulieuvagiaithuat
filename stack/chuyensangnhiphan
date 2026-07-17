@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int stack[100];
+    int top = -1;
+
+    cout << "Nhập số nguyên dương";
+    cin >> n;
+
+    // Trường hợp n = 0
+    if(n == 0){
+        cout << "số nhị phân: 0";
+        return 0;
+    }
+
+    // Chia liên tiếp cho 2 và lưu số dư vào stack
+    while(n > 0){
+        int soDu = n % 2;
+
+        top++;
+        stack[top] = soDu;
+
+        n = n / 2;
+    }
+
+    // Lấy các phần tử stack đẻ in ra
+    cout << "so nhi phan ";
+
+    while(top >= 0)
+    {
+        cout << stack[top];
+        top--;
+    }
+
+    return 0;
+}
