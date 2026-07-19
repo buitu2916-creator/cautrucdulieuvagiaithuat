@@ -1,0 +1,33 @@
+#include <iostream>
+#include <queue>
+using namespace std;;
+
+int main(){
+	queue<int> q;
+	
+	//1.push()thêm phan tu vao cuoi phan tu
+	q.push(10);
+	q.push(20);
+	q.push(30);
+	cout << "Ðã thêm 30 vào hàng doi\n";
+	
+	//2 size() - lay so luong phan tu
+	cout << "kich thuoc hien tai " << q.size() << endl;
+	 
+	//3. front() - xem phan tu o cac hang doi
+	cout << "phan tu dau tien:  " << q.front() << endl;
+	
+	//4. pop() - xóa phan tu o dau hang doi
+	q.pop();
+	cout << "Da xoa phan tu dau tien.\n";
+	cout << "Phan tu dau tien moi: " << q.front() << endl;
+	
+	if(q.empty()){
+		cout << "Queue dang rong.\n";
+	}else{
+		cout << "Queue co phan tu.\n";
+	}
+	
+	return 0;
+}
+'
